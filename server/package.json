@@ -1,0 +1,25 @@
+{
+  "name": "nasa-project",
+  "version": "1.0.0",
+  "description": "This is the node server",
+  "main": "src/server.js",
+  "author": "arv",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "csv-parse": "^5.3.0",
+    "express": "^4.18.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "jest": "^29.1.2",
+    "nodemon": "^2.0.20",
+    "supertest": "^6.2.4"
+  },
+  "scripts": {
+    "watch": "set PORT=5000&& nodemon server.js",
+    "start": "set PORT=5000&& node src/server.js",
+    "test": "jest",
+    "test-watch": "jest --watch"
+  }
+}

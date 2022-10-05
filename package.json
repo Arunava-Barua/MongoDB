@@ -1,0 +1,21 @@
+{
+  "name": "nasa-project",
+  "version": "1.0.0",
+  "description": "Overall project",
+  "main": "index.js",
+  "author": "arv",
+  "license": "MIT",
+  "scripts": {
+    "install-server": "cd server && yarn",
+    "install-client": "cd client && yarn",
+    "install": "concurrently \"yarn install-server\" \"yarn install-client\"",
+    "server": "cd server && yarn run watch",
+    "client": "cd client && yarn run start",
+    "start": "concurrently \"yarn server\" \"yarn client\"",
+    "deploy": "concurrently \"cd client && yarn build\" \"cd server && yarn start\""
+  },
+  "dependencies": {
+    "concurrently": "^7.4.0",
+    "mongoose": "^6.6.3"
+  }
+}
