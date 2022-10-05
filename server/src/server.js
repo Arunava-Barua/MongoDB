@@ -3,14 +3,15 @@
 const http = require("http");
 const mongoose = require("mongoose");
 
+const {MONGO_URL} = require('../secret')
+
 const app = require("./app");
 
 const { loadPlanetsData } = require("../src/models/planets.model");
 
 const PORT = process.env.PORT || 8000;
 
-const MONGO_URL =
-  "mongodb+srv://arv31:mongodb123@nasacluster.gcpjyyo.mongodb.net/?retryWrites=true&w=majority";
+
 
 const server = http.createServer(app);
 
