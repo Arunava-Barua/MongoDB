@@ -6,13 +6,13 @@
   "author": "arv",
   "license": "MIT",
   "scripts": {
-    "install-server": "cd server && yarn",
-    "install-client": "cd client && yarn",
-    "install": "concurrently \"yarn install-server\" \"yarn install-client\"",
-    "server": "cd server && yarn run watch",
-    "client": "cd client && yarn run start",
-    "start": "concurrently \"yarn server\" \"yarn client\"",
-    "deploy": "concurrently \"cd client && yarn build\" \"cd server && yarn start\""
+    "install-server": "cd server && npm install",
+    "install-client": "cd client && npm install",
+    "install": "concurrently \"npm run install-server\" \"npm run install-client\"",
+    "server": "cd server && npm run watch",
+    "client": "cd client && npm run start",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "deploy": "concurrently \"cd client && npm run build\" \"cd server && npm run start\""
   },
   "dependencies": {
     "concurrently": "^7.4.0",
