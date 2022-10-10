@@ -1,13 +1,17 @@
 name: Nasa Project Continuous Integration
-on: 
+on:
   push:
-    branches: [ master ]
-  pull_request: 
-    branches: [ master ]
+    branches: [master]
+  pull_request:
+    branches: [master]
 jobs:
-  build: 
+  build:
     runs-on: ubuntu-latest
-    steps: 
+    steps:
       - uses: actions/checkout@v3
+      - name: Use Node.js version 16
+        uses: actions/setup-node@v2
+        with:
+          node-version: "16"
       - run: yarn
       - run: cd client && yarn run build
